@@ -1,0 +1,17 @@
+<ul class="list bg-base-100 rounded-box shadow-md">
+  <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Your personal newsfeed</li>
+  {% for item in items %}
+  <li class="list-row">
+    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+    <div>
+        <div>{{ item.title }}</div>
+        <div class="text-xs uppercase font-semibold opacity-60">{{ item.source }} {{ item.created_at.strftime('%b %d, %Y') if item.created_at else '' }}</div>
+    </div>
+    <p class="list-col-wrap text-xs">
+    {{ item.content }}
+    </p>
+    {% include "partials/like_button.html" %}
+  </li>
+  {% endfor %}
+</ul>
+

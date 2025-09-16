@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="h-full bg-slate-900">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bashbaord App Title</title>
+    <link rel="stylesheet" href="/static/css/output.css">
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <style>
+    .when-loading { display: none; }
+    .htmx-request .when-loading { display: inline-flex; }
+    .htmx-request .when-idle { display: none; }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    {% include "navbar.html" %}
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

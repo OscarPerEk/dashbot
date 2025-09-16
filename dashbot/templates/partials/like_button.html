@@ -1,0 +1,27 @@
+{% set is_liked = item.is_liked %}
+<button
+  type="button"
+  class="btn btn-square btn-ghost {{ 'text-pink-500' if is_liked else '' }}"
+  aria-pressed="{{ 'true' if is_liked else 'false' }}"
+  hx-post="/toggle-like/{{ item.id }}"
+  hx-target="this"
+  hx-swap="outerHTML"
+  hx-vals='{"is_liked": "{{ "true" if is_liked else "false" }}"}'
+>
+  <span class="when-idle flex">
+    {% if is_liked %}
+    <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.716-4.476-9.192-8.015C1.298 11.2 1 9.988 1 8.5 1 5.462 3.462 3 6.5 3c1.957 0 3.356.703 4.5 2 1.144-1.297 2.543-2 4.5-2C18.538 3 21 5.462 21 8.5c0 1.488-.298 2.7-1.808 4.485C18.716 16.524 12 21 12 21Z"/></svg>
+    {% else %}
+    <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></g></svg>
+    {% endif %}
+  </span>
+  <span class="when-loading">
+    <svg class="size-[1.2em] animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+        <path d="M12 2a10 10 0 1 0 10 10"/>
+      </g>
+    </svg>
+  </span>
+</button>
+
+

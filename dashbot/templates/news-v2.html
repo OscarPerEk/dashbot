@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="max-w-3xl mx-auto py-8 space-y-8"
+     hx-get="/hx/news-feed"
+     hx-trigger="load"
+     hx-target="#news-feed-list"
+     hx-swap="innerHTML">
+  
+  <div id="news-feed-list" class="space-y-6">
+    <div class="flex items-center justify-center py-10 text-slate-400">
+      Loading news…
+    </div>
+  </div>
+
+</div>
+
+{% endblock content %}
+

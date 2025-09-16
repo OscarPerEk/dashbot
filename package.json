@@ -1,0 +1,27 @@
+{
+  "name": "dashbot",
+  "version": "1.0.0",
+  "description": "There are two goals of this project. The first one being to create a dashboard with personalised information. I wanna try to implement the following business logic:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./dashbot/static/css/input.css -o ./dashbot/static/css/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarPerEk/dashbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OscarPerEk/dashbot/issues"
+  },
+  "homepage": "https://github.com/OscarPerEk/dashbot#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "daisyui": "^5.1.12",
+    "tailwindcss": "^4.1.13"
+  }
+}

@@ -1,0 +1,83 @@
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="max-w-3xl mx-auto py-8 space-y-8">
+
+  <!-- Article 1 -->
+  <div class="bg-slate-800 rounded-lg p-6 shadow-md">
+    <div class="flex justify-between items-center mb-2">
+      <h2 class="text-2xl font-semibold text-blue-400">Breaking News: Tailwind Rocks!</h2>
+      <span class="text-sm text-slate-400">Sep 9, 2025</span>
+    </div>
+    <p class="text-slate-200 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eros ac massa dapibus, a laoreet
+      turpis tincidunt. Fusce vitae dui ac leo tristique volutpat. Pellentesque habitant morbi tristique senectus
+      et netus et malesuada fames ac turpis egestas.
+    </p>
+    <div class="flex items-center space-x-4">
+      <div class="flex space-x-1">
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 1</button>
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 2</button>
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 3</button>
+      </div>
+      <form class="flex items-center space-x-2 flex-1">
+        <input type="text" placeholder="Leave feedback..." class="flex-1 px-3 py-1 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="px-4 py-1 bg-blue-500 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Article 2 -->
+  <div class="bg-slate-800 rounded-lg p-6 shadow-md">
+    <div class="flex justify-between items-center mb-2">
+      <h2 class="text-2xl font-semibold text-blue-400">Tech Update: AI Everywhere</h2>
+      <span class="text-sm text-slate-400">Sep 8, 2025</span>
+    </div>
+    <p class="text-slate-200 mb-4">
+      Curabitur lobortis, elit vel tincidunt laoreet, lacus eros lacinia quam, eget porta orci metus et dolor.
+      Donec in purus nec sapien gravida tincidunt. Nulla facilisi. Praesent sit amet justo at felis convallis
+      pretium.
+    </p>
+    <div class="flex items-center space-x-4">
+      <div class="flex space-x-1">
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 1</button>
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 2</button>
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 3</button>
+      </div>
+      <form class="flex items-center space-x-2 flex-1">
+        <input type="text" placeholder="Leave feedback..." class="flex-1 px-3 py-1 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="px-4 py-1 bg-blue-500 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Article 3 -->
+  <div class="bg-slate-800 rounded-lg p-6 shadow-md">
+    <div class="flex justify-between items-center mb-2">
+      <h2 class="text-2xl font-semibold text-blue-400">Sports: Football Finals Recap</h2>
+      <span class="text-sm text-slate-400">Sep 7, 2025</span>
+    </div>
+    <p class="text-slate-200 mb-4">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+    <div class="flex items-center space-x-4">
+      <div class="flex space-x-1">
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 1</button>
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 2</button>
+        <button class="px-2 py-1 bg-yellow-400 text-slate-900 rounded hover:bg-yellow-500">★ 3</button>
+      </div>
+      <form class="flex items-center space-x-2 flex-1">
+        <input type="text" placeholder="Leave feedback..." class="flex-1 px-3 py-1 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="px-4 py-1 bg-blue-500 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{% endblock content %}
+

@@ -1,0 +1,4 @@
+.env
+node_modules/
+.venv/
+#dashbot/static/css/output.css
