@@ -2,14 +2,14 @@
   <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Your personal newsfeed</li>
   {% for item in items %}
   <li class="list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
     <div>
-        <div>{{ item.title }}</div>
-        <div class="text-xs uppercase font-semibold opacity-60">{{ item.source }} {{ item.created_at.strftime('%b %d, %Y') if item.created_at else '' }}</div>
+        <div class="text-2xl">{{ item.title }}</div>
+        <div class="text-xl mb-4 uppercase font-semibold opacity-60">{{ item.source }} {{ item.created_at.strftime('%b %d, %Y') if item.created_at else '' }}</div>
+        <div class="mt-4"><img class="w-[50px] h-[50px] rounded-box" src="/image/{{ item.image }}"/></div>
     </div>
-    <p class="list-col-wrap text-xs">
-    {{ item.content }}
-    </p>
+    <div class="list-col-wrap text-xs">
+      {{ item.content | safe }}
+    </div>
     {% include "partials/like_button.html" %}
   </li>
   {% endfor %}

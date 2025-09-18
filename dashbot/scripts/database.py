@@ -38,6 +38,7 @@ class NewsFeed(Base):
     title: Mapped[str] = mapped_column(String)
     content: Mapped[str] = mapped_column(String)
     source: Mapped[str] = mapped_column(String)
+    image: Mapped[str] = mapped_column(String)
     score: Mapped[int | None] = mapped_column(Integer, nullable=True)
     feedback: Mapped[str | None] = mapped_column(String, nullable=True)
     created_at: Mapped[DateTime] = mapped_column(TIMESTAMP, server_default=func.now())
@@ -95,4 +96,22 @@ So the databases are created. Next lets either create the backend
 logic or lets make some fake data for now and make the front end
 look reasonable.
 
+
+Now most stuff works. Obviously not optimally. And the content
+is unfortunatly not so interesting. Maybe I should be doing
+less. Like maybe I doint need to personalize and make topics
+and instead just use the topic per picture. They are already
+clustered together. Maybe I can just have ai filter out the
+most interesting websites so its not too much info for the summary.
+Like we wanna reduce the 100 pages down to some info.
+Maybe I should just let the ai summarize the core facts and
+points of each article by its own. And then take those facts
+and make a summary out of that. Like then we're more like
+curating many articles into one. I think that could be more
+interesting.
+
+So instead of making toics, lets just extract all websites
+and summarize them. Lets not search so many websites, like
+instead we only search google for topics already so by sorting
+on date, we should anyway always get the relevant articles.
 """
